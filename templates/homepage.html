@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPINION MINING PROJECT</title>
+    <link rel="stylesheet" href = "{{ url_for('static',filename='design.css') }}">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/spring">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    body{
+        background: url('https://img.freepik.com/premium-photo/ingredients-cooking-food-background-top-view-black-background_999431-914.jpg?w=2000');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        overflow: hidden;
+    }
+    #fire{
+        position: absolute;
+        height: 180px;
+        width: 500px;
+        right: 1100px;
+        bottom: 0%;
+    }
+    #fire2{
+        position: absolute;
+        height: 180px;
+        width: 500px;
+        left: 355px;
+        bottom: 0%;
+    }
+</style>    
+<body>
+    <div class="top2">Welcome to</div>
+    <br>
+    <div id="res_name">
+        <br>
+        <br>
+        <h1>The Great Indian Kitchen</h1>
+        <h2 id="hp">Hope you had a <i>delicious</i> food.</h2>
+        <h2 id="pls">Please leave a review for our food & service</h2>
+    </div>
+    <form action="/submit" method='post'>
+        <div>
+            <input type="text" id="textboxid" name="reviewtxt" size="50" placeholder="Enter your review" required>
+        </div>
+        <br>
+        <button type="submit" id="but">Submit</button>
+        <img id="fire" src="/static/images/fire1.gif" alt="fire">
+        <img id="fire2" src="/static/images/fire1.gif" alt="fire">
+    </form>
+</body>
+</html>

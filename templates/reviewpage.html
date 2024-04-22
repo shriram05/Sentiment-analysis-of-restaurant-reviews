@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="stylesheet" href = "{{ url_for('static',filename='design.css') }}">
+</head>
+<style>
+    body{
+        background-image: url('/static/images/review-bg.jpg');
+        /* background-image: linear-gradient(rgb(208, 135, 32),rgb(164, 194, 29)); */
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    img{
+        position: absolute;
+        left: 900px;
+        width: 250px;
+        height: 250px;
+    }
+</style>
+<body class="body2">
+    <div id="rv">
+        <h1 id="yr">your review has been recorded</h1>
+        <h1 id="ty">thank you..! visit again..!</h1>
+    </div>
+    <img src="/static/images/pic2.gif" alt="pic">
+    <h2 id="cs">"Customer satisfaction is the secret ingredient<br>that drives every successful restaurant."</h2>
+    <form action="/view">
+       <button type="submit" id="view-but">VIEW</button>
+    </form>
+</body>
+</html>

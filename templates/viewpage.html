@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<style>
+  body{
+      background-image:linear-gradient(rgb(100, 80, 199),rgb(223, 136, 223));
+      /* background-image: linear-gradient(rgb(208, 135, 32),rgb(164, 194, 29)); */
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      overflow-x: hidden;
+  }
+  td{
+    max-width: 500px;
+  }
+  h3{
+    font-size: 25px;
+  }
+  </style>    
+<link rel="stylesheet" href = "{{ url_for('static',filename='design.css') }}">
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:400px"></canvas>
+
+<script>
+var xValues = ["Positive","Negative"];
+var yValues = ['{{ px }}','{{ nx }}'];
+var barColors = ["#5C2C06", "#CEB180"];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+    }
+  }
+});
+</script>
+<h1 id="graph">GRAPHICAL REPRESENTATION</h1>
+<h3>TOTAL REVIEWS = {{ sum1 }}</h3>
+<h3 id="hd1">POSITIVE REVIEWS = {{ px }}</h3>
+<h3 id="hd2">NEGATIVE REVIEWS = {{ nx }}</h3>
+<div id="main">
+  <table>
+    <tr>
+      <td>
+        <h1 id="rev_view">REVIEWS</h1>
+      </td>
+      <td>
+        <h1 id="rev_view1">PREDICTIONS</h1>
+      </td>
+    </tr>
+    
+      {% for x in ex %}
+      <tr>
+          <td>
+            <p id="rev-col">{{ x }}</p>
+          </td>
+          <td>
+            <p id="pre-col">{{ ex[x] }}</p>
+          </td>
+      </tr>
+    {% endfor %}
+      
+      
+  </table>
+</div>
+</body>
+</html>
