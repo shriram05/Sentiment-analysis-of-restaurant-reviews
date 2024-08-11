@@ -1,5 +1,4 @@
 # Sentiment-Analysis-of-Restaurant-Reviews
 In this project we focused on revolutionizing the assessment of restaurant performance through the lens of sentiment analysis. In this endeavor, we center our efforts on the development of a cutting-edge model utilizing the Logistic Regression algorithm and essential packages such as numpy and pandas. Our primary objective is to predict the polarity—whether positive or negative—of restaurant reviews, transcending the limitations posed by challenges like sarcastic remarks and misspelled words. By employing sophisticated language processing techniques, our model aims to provide actionable insights that empower restaurants to not only gauge their overall performance but also proactively engage with dissatisfied customers, ultimately enhancing customer support and elevating the dining experience. Join us on this journey as we strive to redefine how restaurants interpret customer feedback, fostering a culture of continuous improvement and ensuring sustained success in the highly competitive hospitality landscape.
 
-Colab Link :- https://colab.research.google.com/drive/1OC98ZaL2odEgDrKPvL0z8MOQBIBGpdU7?usp=sharing
-
+Colab Link :- https://colab.research.google.com/drive/1VwQvVjGkPUQnp166QbfR_pOVl7-rKEv4?authuser=1#scrollTo=EWEk4WUmRKfB
